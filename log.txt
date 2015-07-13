@@ -1,0 +1,339 @@
+Ka
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for library containing strerror... none required
+checking for ANSI C header files... (cached) yes
+checking whether to enable debugging... no
+checking whether to enable profiling... no
+checking whether to enable serialization... no
+checking if user provides library for Osi... no
+checking if user provides library for Glpk... no
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for ranlib... (cached) ranlib
+checking for system type... "LINUX"
+Using BLAS library /usr/lib/libblas.so
+Using LAPACK library /usr/lib/liblapack.so
+Using LAPACK++ directory  /usr/include/lapackpp
+Using LAPACK++ library  /usr/lib
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating README
+config.status: creating doc/Makefile
+config.status: creating m4/Makefile
+config.status: creating src/Makefile
+config.status: creating src/Utilities/Makefile
+config.status: creating src/AccpmLA/Makefile
+config.status: creating src/ProblemInput/Makefile
+config.status: creating src/AccpmCore/Makefile
+config.status: creating src/Oracle/Makefile
+config.status: creating src/UI/Makefile
+config.status: creating src/Benchmark/Makefile
+config.status: creating src/Benchmark/LA/Makefile
+config.status: creating src/Benchmark/PMED/Makefile
+config.status: creating src/Benchmark/QP/Makefile
+config.status: creating src/Benchmark/TSP/Makefile
+config.status: creating src/Benchmark/UAX/Makefile
+config.status: creating src/Benchmark/CS/Makefile
+config.status: creating src/Benchmark/HACCPM/Makefile
+config.status: creating src/Benchmark/NNPOL/Makefile
+config.status: creating src/Benchmark/MCF/Makefile
+config.status: creating src/Benchmark/APS/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+Making install in m4
+make[1]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/m4'
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/m4'
+make[2]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/share/aclocal'
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/m4'
+make[1]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/m4'
+Making install in src
+make[1]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src'
+Making install in Utilities
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Utilities'
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Utilities'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+ /usr/bin/install -c -m 644 ../../../src/Utilities/AccpmDefs.h ../../../src/Utilities/AccpmSignal.h ../../../src/Utilities/Timer.h ../../../src/Utilities/ExitCode.h '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Utilities'
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Utilities'
+Making install in AccpmLA
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/AccpmLA'
+g++ -DHAVE_CONFIG_H -I. -I../../../src/AccpmLA -I../.. -I../../../src/Utilities -I/usr/include/lapackpp -I/usr/include/lapackpp/include/ -I/usr/include/lapackpp/include/lapackpp    -fpermissive -MT AccpmVector.o -MD -MP -MF .deps/AccpmVector.Tpo -c -o AccpmVector.o ../../../src/AccpmLA/AccpmVector.C
+mv -f .deps/AccpmVector.Tpo .deps/AccpmVector.Po
+g++ -DHAVE_CONFIG_H -I. -I../../../src/AccpmLA -I../.. -I../../../src/Utilities -I/usr/include/lapackpp -I/usr/include/lapackpp/include/ -I/usr/include/lapackpp/include/lapackpp    -fpermissive -MT AccpmGenMatrix.o -MD -MP -MF .deps/AccpmGenMatrix.Tpo -c -o AccpmGenMatrix.o ../../../src/AccpmLA/AccpmGenMatrix.C
+mv -f .deps/AccpmGenMatrix.Tpo .deps/AccpmGenMatrix.Po
+g++ -DHAVE_CONFIG_H -I. -I../../../src/AccpmLA -I../.. -I../../../src/Utilities -I/usr/include/lapackpp -I/usr/include/lapackpp/include/ -I/usr/include/lapackpp/include/lapackpp    -fpermissive -MT AccpmDynMatrix.o -MD -MP -MF .deps/AccpmDynMatrix.Tpo -c -o AccpmDynMatrix.o ../../../src/AccpmLA/AccpmDynMatrix.C
+mv -f .deps/AccpmDynMatrix.Tpo .deps/AccpmDynMatrix.Po
+g++ -DHAVE_CONFIG_H -I. -I../../../src/AccpmLA -I../.. -I../../../src/Utilities -I/usr/include/lapackpp -I/usr/include/lapackpp/include/ -I/usr/include/lapackpp/include/lapackpp    -fpermissive -MT AccpmLASolve.o -MD -MP -MF .deps/AccpmLASolve.Tpo -c -o AccpmLASolve.o ../../../src/AccpmLA/AccpmLASolve.C
+mv -f .deps/AccpmLASolve.Tpo .deps/AccpmLASolve.Po
+g++ -DHAVE_CONFIG_H -I. -I../../../src/AccpmLA -I../.. -I../../../src/Utilities -I/usr/include/lapackpp -I/usr/include/lapackpp/include/ -I/usr/include/lapackpp/include/lapackpp    -fpermissive -MT AccpmBlasInterface.o -MD -MP -MF .deps/AccpmBlasInterface.Tpo -c -o AccpmBlasInterface.o ../../../src/AccpmLA/AccpmBlasInterface.C
+mv -f .deps/AccpmBlasInterface.Tpo .deps/AccpmBlasInterface.Po
+rm -f libaccpmla.a
+ar cru libaccpmla.a AccpmVector.o AccpmGenMatrix.o AccpmDynMatrix.o AccpmLASolve.o AccpmBlasInterface.o 
+ranlib libaccpmla.a
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/AccpmLA'
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/lib'
+ /usr/bin/install -c -m 644  libaccpmla.a '/home/kostia/research/3dlibrary/cpp/oboe/build/lib'
+ ( cd '/home/kostia/research/3dlibrary/cpp/oboe/build/lib' && ranlib libaccpmla.a )
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+ /usr/bin/install -c -m 644 ../../../src/AccpmLA/AccpmVector.h ../../../src/AccpmLA/AccpmGenMatrix.h ../../../src/AccpmLA/AccpmDynMatrix.h ../../../src/AccpmLA/AccpmBlasInterface.h '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/AccpmLA'
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/AccpmLA'
+Making install in ProblemInput
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/ProblemInput'
+g++ -DHAVE_CONFIG_H -I. -I../../../src/ProblemInput -I../.. -I../../../src/AccpmLA/ -I../../../src/Utilities -I/usr/include/lapackpp -I/usr/include/lapackpp/include/ -I/usr/include/lapackpp/include/lapackpp    -fpermissive -MT Parameters.o -MD -MP -MF .deps/Parameters.Tpo -c -o Parameters.o ../../../src/ProblemInput/Parameters.C
+mv -f .deps/Parameters.Tpo .deps/Parameters.Po
+rm -f libaccpmparam.a
+ar cru libaccpmparam.a Parameters.o 
+ranlib libaccpmparam.a
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/ProblemInput'
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/lib'
+ /usr/bin/install -c -m 644  libaccpmparam.a '/home/kostia/research/3dlibrary/cpp/oboe/build/lib'
+ ( cd '/home/kostia/research/3dlibrary/cpp/oboe/build/lib' && ranlib libaccpmparam.a )
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+ /usr/bin/install -c -m 644 ../../../src/ProblemInput/Parameters.h '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/ProblemInput'
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/ProblemInput'
+Making install in AccpmCore
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/AccpmCore'
+g++ -DHAVE_CONFIG_H -I. -I../../../src/AccpmCore -I../.. -I../../../src/ProblemInput -I../../../src/AccpmLA/ -I../../../src/Oracle -I../../../src/Utilities -I/usr/include/lapackpp -I/usr/include/lapackpp/include/ -I/usr/include/lapackpp/include/lapackpp    -fpermissive -MT Manager.o -MD -MP -MF .deps/Manager.Tpo -c -o Manager.o ../../../src/AccpmCore/Manager.C
+mv -f .deps/Manager.Tpo .deps/Manager.Po
+g++ -DHAVE_CONFIG_H -I. -I../../../src/AccpmCore -I../.. -I../../../src/ProblemInput -I../../../src/AccpmLA/ -I../../../src/Oracle -I../../../src/Utilities -I/usr/include/lapackpp -I/usr/include/lapackpp/include/ -I/usr/include/lapackpp/include/lapackpp    -fpermissive -MT Method.o -MD -MP -MF .deps/Method.Tpo -c -o Method.o ../../../src/AccpmCore/Method.C
+mv -f .deps/Method.Tpo .deps/Method.Po
+g++ -DHAVE_CONFIG_H -I. -I../../../src/AccpmCore -I../.. -I../../../src/ProblemInput -I../../../src/AccpmLA/ -I../../../src/Oracle -I../../../src/Utilities -I/usr/include/lapackpp -I/usr/include/lapackpp/include/ -I/usr/include/lapackpp/include/lapackpp    -fpermissive -MT LocSet.o -MD -MP -MF .deps/LocSet.Tpo -c -o LocSet.o ../../../src/AccpmCore/LocSet.C
+mv -f .deps/LocSet.Tpo .deps/LocSet.Po
+g++ -DHAVE_CONFIG_H -I. -I../../../src/AccpmCore -I../.. -I../../../src/ProblemInput -I../../../src/AccpmLA/ -I../../../src/Oracle -I../../../src/Utilities -I/usr/include/lapackpp -I/usr/include/lapackpp/include/ -I/usr/include/lapackpp/include/lapackpp    -fpermissive -MT Solution.o -MD -MP -MF .deps/Solution.Tpo -c -o Solution.o ../../../src/AccpmCore/Solution.C
+mv -f .deps/Solution.Tpo .deps/Solution.Po
+rm -f libaccpmcore.a
+ar cru libaccpmcore.a Manager.o Method.o LocSet.o Solution.o 
+ranlib libaccpmcore.a
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/AccpmCore'
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/lib'
+ /usr/bin/install -c -m 644  libaccpmcore.a '/home/kostia/research/3dlibrary/cpp/oboe/build/lib'
+ ( cd '/home/kostia/research/3dlibrary/cpp/oboe/build/lib' && ranlib libaccpmcore.a )
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/AccpmCore'
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/AccpmCore'
+Making install in Oracle
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Oracle'
+g++ -DHAVE_CONFIG_H -I. -I../../../src/Oracle -I../.. -I../../../src/Utilities -I../../../src/AccpmLA -I/usr/include/lapackpp/include/    -fpermissive -MT Oracle.o -MD -MP -MF .deps/Oracle.Tpo -c -o Oracle.o ../../../src/Oracle/Oracle.C
+mv -f .deps/Oracle.Tpo .deps/Oracle.Po
+rm -f libaccpmoracle.a
+ar cru libaccpmoracle.a Oracle.o 
+ranlib libaccpmoracle.a
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Oracle'
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/lib'
+ /usr/bin/install -c -m 644  libaccpmoracle.a '/home/kostia/research/3dlibrary/cpp/oboe/build/lib'
+ ( cd '/home/kostia/research/3dlibrary/cpp/oboe/build/lib' && ranlib libaccpmoracle.a )
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+ /usr/bin/install -c -m 644 ../../../src/Oracle/Oracle.h '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Oracle'
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Oracle'
+Making install in UI
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/UI'
+g++ -DHAVE_CONFIG_H -I. -I../../../src/UI -I../.. -I../../../src/Utilities -I../../../src/AccpmLA -I../../../src/AccpmCore -I../../../src/ProblemInput -I../../../src/Oracle -I/usr/include/lapackpp/include/    -fpermissive -MT QpGenerator.o -MD -MP -MF .deps/QpGenerator.Tpo -c -o QpGenerator.o ../../../src/UI/QpGenerator.C
+mv -f .deps/QpGenerator.Tpo .deps/QpGenerator.Po
+rm -f libaccpm.a
+ar cru libaccpm.a QpGenerator.o 
+ranlib libaccpm.a
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/UI'
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/lib'
+ /usr/bin/install -c -m 644  libaccpm.a '/home/kostia/research/3dlibrary/cpp/oboe/build/lib'
+ ( cd '/home/kostia/research/3dlibrary/cpp/oboe/build/lib' && ranlib libaccpm.a )
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+ /usr/bin/install -c -m 644 ../../../src/UI/QpGenerator.h '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/UI'
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/UI'
+Making install in Benchmark
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark'
+Making install in LA
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/LA'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/LA'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/LA'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/LA'
+Making install in PMED
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/PMED'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/PMED'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/PMED'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/PMED'
+Making install in QP
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/QP'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/QP'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/QP'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/QP'
+Making install in TSP
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/TSP'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/TSP'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/TSP'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/TSP'
+Making install in UAX
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/UAX'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/UAX'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/UAX'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/UAX'
+Making install in CS
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/CS'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/CS'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/CS'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/CS'
+Making install in HACCPM
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/HACCPM'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/HACCPM'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/HACCPM'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/HACCPM'
+Making install in NNPOL
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/NNPOL'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/NNPOL'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/NNPOL'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/NNPOL'
+Making install in MCF
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/MCF'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/MCF'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/MCF'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/MCF'
+Making install in APS
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/APS'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/APS'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/APS'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark/APS'
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark'
+make[4]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark'
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark'
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src/Benchmark'
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src'
+make[3]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src'
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src'
+make[1]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/src'
+Making install in doc
+make[1]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/doc'
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build/doc'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/doc'
+make[1]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build/doc'
+make[1]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build'
+make[2]: Entering directory `/mnt/E/research/3dlibrary/cpp/oboe/build'
+make[2]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+ /usr/bin/install -c -m 644 config.h '/home/kostia/research/3dlibrary/cpp/oboe/build/include'
+make[2]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build'
+make[1]: Leaving directory `/mnt/E/research/3dlibrary/cpp/oboe/build'
