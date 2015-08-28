@@ -12,10 +12,10 @@ OBOE_DSTR=/home.dokt/antonkos/lib/oboe
 
 fi
 
-export BLAS=$(find /usr/lib -maxdepth 1 -type l -iname "*libblas.*"|xargs -I{} sh -c 'echo "{}"')
-export LAPACK=$(find /usr/lib -maxdepth 1 -type l -iname "*liblapack.*"|xargs -I{} sh -c 'echo "{}"')
-export LAPACKCPP_DIR=${LAPACKPP}
-export LAPACKCPP_LIB=${LAPACKPP}/lib
+BLAS=$(find /usr/lib -maxdepth 1 -type l -iname "*libblas.*"|xargs -I{} sh -c 'echo "{}"')
+LAPACK=$(find /usr/lib -maxdepth 1 -type l -iname "*liblapack.*"|xargs -I{} sh -c 'echo "{}"')
+LAPACKCPP_DIR=${LAPACKPP}
+LAPACKCPP_LIB=${LAPACKPP}/lib
 
 rm -r autom4te.cache
 
