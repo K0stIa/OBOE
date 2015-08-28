@@ -6,21 +6,16 @@ if [ $local_host=='MacBook-Pro-K0stIa.local' ]; then
 LAPACKPP=/Users/Shared/research/code/python/jmlr/lapackpp
 OBOE_DSTR=/home.dokt/antonkos/lib/oboe
 
-export BLAS=/usr/lib/libblas.dylib
-export LAPACK=/usr/lib/liblapack.dylib
-export LAPACKCPP_DIR=${LAPACKPP}
-export LAPACKCPP_LIB=${LAPACKPP}/lib
-
 else 
 LAPACKPP=//home.dokt/antonkos/lib/lapackpp
 OBOE_DSTR=/home.dokt/antonkos/lib/oboe
 
-export BLAS=/usr/lib/libblas.so
-export LAPACK=/usr/lib/liblapack.so
+fi
+
+export BLAS=$(find /usr/lib -maxdepth 1 -type l -iname "*libblas.*"|xargs -I{} sh -c 'echo "{}"')
+export LAPACK=$(find /usr/lib -maxdepth 1 -type l -iname "*liblapack.*"|xargs -I{} sh -c 'echo "{}"')
 export LAPACKCPP_DIR=${LAPACKPP}
 export LAPACKCPP_LIB=${LAPACKPP}/lib
-
-fi
 
 rm -r autom4te.cache
 
