@@ -1,16 +1,27 @@
+MAKE=make
 
-local_host= uname -a | awk '{print $2}'
+OBOE_DSTR=$(pwd)/oboe_dstr
+LAPACKPP=${OBOE_DSTR}/lapackpp
 
-if [ $local_host=='MacBook-Pro-K0stIa.local' ]; then
+# install lapackpp
+mkdir -p oboe_dstr
+cd oboe_dstr  
 
-LAPACKPP=/Users/Shared/research/code/python/jmlr/lapackpp
-OBOE_DSTR=/home.dokt/antonkos/lib/oboe
+LAPACK_URL=http://kent.dl.sourceforge.net/sourceforge/lapackpp
+FILE=lapackpp-2.5.4.tar.gz
+DIR=lapackpp-2.5.4
 
-else 
-LAPACKPP=//home.dokt/antonkos/lib/lapackpp
-OBOE_DSTR=/home.dokt/antonkos/lib/oboe
-
+rm -rf ${FILE} ${DIR}
+wget ${LAPACK_URL}/${FILE} && tar -zxf ${FILE}
+cd ${DIR}
+# Correct definition of drand() function in src/genmd.cc file for Darwin platform
+if [ $(uname -a | awk '{print $1}')=='Darwin' ]; then
+sed -i  '68s/extern "C" double drand48(void) throw ();/extern "C" double drand48(void);/' src/genmd.cc | tee src/genmd.cc
 fi
+./configure -prefix=${LAPACKPP} && ${MAKE} && ${MAKE} install
+cd ..
+rm -rf ${FILE} ${DIR}
+cd ..
 
 BLAS=$(find /usr/lib -maxdepth 1 -type l -iname "*libblas.*"|xargs -I{} sh -c 'echo "{}"')
 LAPACK=$(find /usr/lib -maxdepth 1 -type l -iname "*liblapack.*"|xargs -I{} sh -c 'echo "{}"')
@@ -41,5 +52,5 @@ mkdir $INCLUDE_DIR
 cp *.h $INCLUDE_DIR
 
 cd ../..
-#rm -r build
+rm -r build
 rm -r autom4te.cache
