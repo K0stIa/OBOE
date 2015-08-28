@@ -23,6 +23,9 @@ cd ..
 rm -rf ${FILE} ${DIR}
 cd ../..
 
+# copy headers
+cp -r oboe_dstr/lapackpp/include/lapackpp/* oboe_dstr/lapackpp/include/
+
 export BLAS=$(find /usr/lib -maxdepth 1 -type l -iname "*libblas.*"|xargs -I{} sh -c 'echo "{}"')
 export LAPACK=$(find /usr/lib -maxdepth 1 -type l -iname "*liblapack.*"|xargs -I{} sh -c 'echo "{}"')
 export LAPACKCPP_DIR=${LAPACKPP}
