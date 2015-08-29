@@ -21,7 +21,7 @@ fi
 ./configure -prefix=${LAPACKPP} && ${MAKE} && ${MAKE} install
 cd ..
 rm -rf ${FILE} ${DIR}
-cd ../..
+cd ..
 
 # copy headers
 cp -r oboe_dstr/lapackpp/include/lapackpp/* oboe_dstr/lapackpp/include/
