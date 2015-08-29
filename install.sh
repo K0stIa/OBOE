@@ -33,6 +33,11 @@ cp -r oboe_dstr/lapackpp/include/lapackpp/* oboe_dstr/lapackpp/include/
 export LAPACKCPP_DIR=${LAPACKPP}
 export LAPACKCPP_LIB=${LAPACKPP}/lib
 
+if [ $(uname -a | awk '{print $1}')=='Darwin' ]; then
+sed -i '126s/F77NAME(dpotrs)(&uplo, &n, &nrhs, &A(0,0), &lda, &X(0,0), &ldb, &info);/F77NAME(dpotrs)(&uplo, &n, &nrhs, (doublereal*)&A(0,0), &lda, &X(0,0), &ldb, &info);/' src/AccpmLA/AccpmLASolve.C | tee src/AccpmLA/AccpmLASolve.C
+fi
+
+
 rm -r autom4te.cache
 
 aclocal
@@ -47,6 +52,10 @@ make install
 
 INCLUDE_DIR=${OBOE_DSTR}/include
 LIB_DIR=${OBOE_DSTR}/lib
+
+mkdir -p ${INCLUDE_DIR}
+mkdir -p ${LIB_DIR}
+
 # copy files
 cd lib
 cp *.a $LIB_DIR
