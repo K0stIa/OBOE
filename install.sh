@@ -1,4 +1,6 @@
 MAKE=make
+export BLAS=/usr/lib/libblas.so
+export LAPACK=/usr/lib/liblapack.so
 
 OBOE_DSTR=$(pwd)/oboe_dstr
 LAPACKPP=${OBOE_DSTR}/lapackpp
@@ -18,7 +20,7 @@ cd ${DIR}
 if [ $(uname -a | awk '{print $1}')=='Darwin' ]; then
 sed -i  '68s/extern "C" double drand48(void) throw ();/extern "C" double drand48(void);/' src/genmd.cc | tee src/genmd.cc
 fi
-./configure -prefix=${LAPACKPP} && ${MAKE} && ${MAKE} install
+./configure -prefix=${LAPACKPP} --with-blas=${BLAS} --with-lapack=${LAPACK} && ${MAKE} && ${MAKE} install
 cd ..
 rm -rf ${FILE} ${DIR}
 cd ..
@@ -26,8 +28,8 @@ cd ..
 # copy headers
 cp -r oboe_dstr/lapackpp/include/lapackpp/* oboe_dstr/lapackpp/include/
 
-export BLAS=$(find /usr/lib -maxdepth 1 -type l -iname "*libblas.*"|xargs -I{} sh -c 'echo "{}"')
-export LAPACK=$(find /usr/lib -maxdepth 1 -type l -iname "*liblapack.*"|xargs -I{} sh -c 'echo "{}"')
+#export BLAS=$(find /usr/lib -maxdepth 1 -type l -iname "*libblas.*"|xargs -I{} sh -c 'echo "{}"')
+#export LAPACK=$(find /usr/lib -maxdepth 1 -type l -iname "*liblapack.*"|xargs -I{} sh -c 'echo "{}"')
 export LAPACKCPP_DIR=${LAPACKPP}
 export LAPACKCPP_LIB=${LAPACKPP}/lib
 
