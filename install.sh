@@ -12,6 +12,7 @@ cd ${OBOE_DSTR}
 LAPACK_URL=http://kent.dl.sourceforge.net/sourceforge/lapackpp
 FILE=lapackpp-2.5.4.tar.gz
 DIR=lapackpp-2.5.4
+CXX=g++-4.9
 
 rm -rf ${FILE} ${DIR}
 wget ${LAPACK_URL}/${FILE} && tar -zxf ${FILE}
