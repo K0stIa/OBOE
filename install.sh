@@ -2,7 +2,7 @@ MAKE=make
 export BLAS=/usr/lib/libblas.so
 export LAPACK=/usr/lib/liblapack.so
 
-OBOE_DSTR=$(pwd)/oboe_dstr
+OBOE_DSTR=$(pwd)/dist
 LAPACKPP=${OBOE_DSTR}/lapackpp
 
 # install lapackpp
