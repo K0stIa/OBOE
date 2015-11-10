@@ -58,6 +58,22 @@ mkdir -p ${LIB_DIR}
 
 # copy files
 cd lib
+
+# pack all libraries in single one
+mkdir tmp
+cd tmp
+ar x ../libaccpmparam.a
+ar x ../libaccpmcore.a
+ar x ../libaccpmla.a
+ar x ../libaccpm.a
+ar x ../libaccpmoracle.a
+
+ar cru ../liboboe.a *.o
+ranlib ../liboboe.a
+
+cd ..
+rm -rf tmp
+
 cp *.a $LIB_DIR
 cd ../include
 
