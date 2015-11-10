@@ -1,6 +1,11 @@
 MAKE=make
-export BLAS=/usr/lib/libblas.so
-export LAPACK=/usr/lib/liblapack.so
+
+ # LDFLAGS:  -L/usr/local/opt/openblas/lib
+ # CPPFLAGS: -I/usr/local/opt/openblas/include
+
+# redefine these
+export BLASS=/usr/local/opt/openblas/lib/libopenblas.dylib
+export LAPACK=/usr/lib/liblapack.dylib
 
 OBOE_DSTR=$(pwd)/dist
 LAPACKPP=${OBOE_DSTR}/lapackpp
@@ -12,7 +17,6 @@ cd ${OBOE_DSTR}
 LAPACK_URL=http://kent.dl.sourceforge.net/sourceforge/lapackpp
 FILE=lapackpp-2.5.4.tar.gz
 DIR=lapackpp-2.5.4
-CXX=g++-4.9
 
 rm -rf ${FILE} ${DIR}
 wget ${LAPACK_URL}/${FILE} && tar -zxf ${FILE}
@@ -21,7 +25,7 @@ cd ${DIR}
 if [ $(uname -a | awk '{print $1}')=='Darwin' ]; then
 sed -i  '68s/extern "C" double drand48(void) throw ();/extern "C" double drand48(void);/' src/genmd.cc | tee src/genmd.cc
 fi
-./configure -prefix=${LAPACKPP} --with-blas=${BLAS} --with-lapack=${LAPACK} && ${MAKE} && ${MAKE} install
+./configure --prefix=${LAPACKPP} --with-blas --with-lapack && ${MAKE} && ${MAKE} install
 cd ..
 rm -rf ${FILE} ${DIR}
 cd ..
@@ -35,7 +39,8 @@ export LAPACKCPP_DIR=${LAPACKPP}
 export LAPACKCPP_LIB=${LAPACKPP}/lib
 
 if [ $(uname -a | awk '{print $1}')=='Darwin' ]; then
-sed -i '126s/F77NAME(dpotrs)(&uplo, &n, &nrhs, &A(0,0), &lda, &X(0,0), &ldb, &info);/F77NAME(dpotrs)(&uplo, &n, &nrhs, (doublereal*)&A(0,0), &lda, &X(0,0), &ldb, &info);/' src/AccpmLA/AccpmLASolve.C | tee src/AccpmLA/AccpmLASolve.C
+#sed -i '126s/F77NAME(dpotrs)(&uplo, &n, &nrhs, &A(0,0), &lda, &X(0,0), &ldb, &info);/F77NAME(dpotrs)(&uplo, &n, &nrhs, (doublereal*)&A(0,0), &lda, &X(0,0), &ldb, &info);/' src/AccpmLA/AccpmLASolve.C | tee src/AccpmLA/AccpmLASolve.C
+sed '68s/.*/extern "C" double drand48(void);/' src/genmd.cc  >> src/tmp && mv src/tmp src/genmd.cc
 fi
 
 
@@ -59,22 +64,6 @@ mkdir -p ${LIB_DIR}
 
 # copy files
 cd lib
-
-# pack all libraries in single one
-mkdir tmp
-cd tmp
-ar x ../libaccpmparam.a
-ar x ../libaccpmcore.a
-ar x ../libaccpmla.a
-ar x ../libaccpm.a
-ar x ../libaccpmoracle.a
-
-ar cru ../liboboe.a *.o
-ranlib ../liboboe.a
-
-cd ..
-rm -rf tmp
-
 cp *.a $LIB_DIR
 cd ../include
 

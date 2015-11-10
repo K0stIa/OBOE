@@ -123,7 +123,9 @@ AccpmLALinSolve(const RealMatrix &A, bool cholesky, RealMatrix &X, const RealMat
   //F77NAME(dtrsm)("L","U","T","N",&n,&nrhs,&alpha,&A(0,0),&n,&X(0,0),&n);
   //F77NAME(dtrsm)("L","U","N","N",&n,&nrhs,&alpha,&A(0,0),&n,&X(0,0),&n);
 
-  F77NAME(dpotrs)(&uplo, &n, &nrhs, &A(0,0), &lda, &X(0,0), &ldb, &info);
+  RealMatrix AA = A;
+
+  F77NAME(dpotrs)(&uplo, &n, &nrhs, &AA(0,0), &lda, &X(0,0), &ldb, &info);
   if (info < 0) {
     std::cerr << "AccpmLALinSolve: argument " << -info << " is invalid"
 	      << std::endl;
