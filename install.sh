@@ -4,11 +4,17 @@ MAKE=make
  # CPPFLAGS: -I/usr/local/opt/openblas/include
 
 # redefine these
-export BLASS=/usr/local/opt/openblas/lib/libopenblas.dylib
-export LAPACK=/usr/lib/liblapack.dylib
+# export BLASS=/usr/local/opt/openblas/lib/libopenblas.dylib
+# export LAPACK=/usr/lib/liblapack.dylib
+
+CXX_COMPILER=g++-4.7.3
+
+export BLAS=/usr/lib/libblas.so
+export LAPACK=/usr/lib/liblapack.so
 
 OBOE_DSTR=$(pwd)/dist
 LAPACKPP=${OBOE_DSTR}/lapackpp
+
 
 # install lapackpp
 mkdir -p ${OBOE_DSTR}
@@ -25,7 +31,7 @@ cd ${DIR}
 if [ $(uname -a | awk '{print $1}')=='Darwin' ]; then
 sed -i  '68s/extern "C" double drand48(void) throw ();/extern "C" double drand48(void);/' src/genmd.cc | tee src/genmd.cc
 fi
-./configure --prefix=${LAPACKPP} --with-blas --with-lapack && ${MAKE} && ${MAKE} install
+./configure --prefix=${LAPACKPP} --with-blas --with-lapack --enable-shared --with-pic && ${MAKE} && ${MAKE} install
 cd ..
 rm -rf ${FILE} ${DIR}
 cd ..
@@ -52,7 +58,8 @@ autoconf
 rm -r build
 mkdir build
 cd build
-../configure CXXFLAGS=-fpermissive
+
+../configure --enable-shared --with-pic CXXFLAGS="-fpermissive -fPIC"
 
 make install
 
